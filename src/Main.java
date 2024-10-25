@@ -1,18 +1,29 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
 
-        Human human = new Human();
+        Pet cat = new Pet("cat", "Bobby", 3, 59, new String[] {"eat", "drink", "sleep"});
 
-        human.schedule = new String[][]{
-                {"Monday", "Gym", "Reading"},
-                {"Tuesday", "Running", "Cooking"},
-                {"Wednesday", "Swimming", "Painting"},
-                {"Thursday", "Yoga", "Gaming"},
-                {"Friday", "Cycling", "Photography"},
-                {"Saturday", "Hiking", "Gardening"},
-                {"Sunday", "Rest", "Family Time"}
-        };
+        Human mother = new Human("Jale", "Aliyeva", 1950);
+        Human father = new Human("Babek", "Aliyev", 1945);
+
+        Human child = new Human("Solomon", "Raster", 2010, 57, cat, father, mother,
+                new String[][] {
+                        {"Monday", "Go to school"},
+                        {"Tuesday", "Do homework"},
+                        {"Wednesday", "Play football"},
+                });
+
+
+        System.out.println(cat);
+        child.greetPet();
+        child.describePet();
+
+
+
+
 
     }
 }
