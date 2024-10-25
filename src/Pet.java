@@ -7,9 +7,7 @@ public class Pet {
     int trickLevel;
     public String[] habits;
 
-    //    public Pet pet;
-//    public Human mother;
-//    public Human father;
+
     public Pet() {
     }
 
