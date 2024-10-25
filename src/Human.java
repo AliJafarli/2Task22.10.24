@@ -1,13 +1,13 @@
 public class Human {
 
-    String name;
-    String surname;
-    int birthYear;
-    int iq;
-    public Pet pet;
-    Human mother;
-    Human father;
-    String[][] schedule;
+    private String name;
+    private String surname;
+    private int birthYear;
+    private int iq;
+    private Pet pet;
+    private Human mother;
+    private Human father;
+    private String[][] schedule;
 
     public Human() {
     }
@@ -37,14 +37,78 @@ public class Human {
         this.schedule = schedule;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
+
+    public int getIq() {
+        return iq;
+    }
+
+    public void setIq(int iq) {
+        this.iq = iq;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
+
+    public Human getMother() {
+        return mother;
+    }
+
+    public void setMother(Human mother) {
+        this.mother = mother;
+    }
+
+    public Human getFather() {
+        return father;
+    }
+
+    public void setFather(Human father) {
+        this.father = father;
+    }
+
+    public String[][] getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String[][] schedule) {
+        this.schedule = schedule;
+    }
+
     public void greetPet() {
-        System.out.println("Hello, " + pet.nickname);
+        System.out.println("Hello, " + pet.getNickname());
 
     }
 
     public void describePet() {
-        String slyLVL = pet.trickLevel > 50 ? "very sly" : "almost not sly";
-        System.out.println("I have a " + pet.species + ", he is " + pet.age + " years old, he is " + slyLVL);
+        String slyLVL = pet.getTrickLevel() > 50 ? "very sly" : "almost not sly";
+        System.out.println("I have a " + pet.getSpecies() + ", he is " + pet.getAge() + " years old, he is " + slyLVL);
     }
 
     public String toString() {
